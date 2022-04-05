@@ -28,7 +28,8 @@ namespace VeterinarioBasico
             comando = new MySqlCommand("SELECT * FROM veterinario", conexion);
             resultado = comando.ExecuteReader();
             datos.Load(resultado);
-            conexion.Close
+            conexion.Close();
+            Dara
         }
 
         private void button1_Click(object sender, EventArgs e)
