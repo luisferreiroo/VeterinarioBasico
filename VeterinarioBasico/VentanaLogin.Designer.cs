@@ -141,6 +141,7 @@ namespace VeterinarioBasico
             this.MaximizeBox = false;
             this.Name = "VentanaLogin";
             this.Text = "VentanaLogin";
+            this.Load += new System.EventHandler(this.VentanaLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

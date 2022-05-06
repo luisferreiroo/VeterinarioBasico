@@ -14,29 +14,23 @@ namespace VeterinarioBasico
 {
     public partial class VentanaLogin : Form
     {
-        private MySqlConnection conexion;
-        private static MySqlCommand comando;
-        private String consulta;
-        private MySqlDataReader resultado;
-        private DataTable datos = new DataTable;
+        Conexion conexion = new Conexion();
+        
         public VentanaLogin()
         {
             InitializeComponent();
-            conexion = new MySqlConnection("Server = 192.168.1.38; Database = test; Uid = root; Pwd =; Port = 3306");
-            conexion.Open();
+            VentanaPrincipal v = new VentanaPrincipal();
+            v.Show();
 
-            comando = new MySqlCommand("SELECT * FROM veterinario", conexion);
-            resultado = comando.ExecuteReader();
-            datos.Load(resultado);
-            conexion.Close
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nombre, contraseña;
-            nombre = Usuario.Text;
-            contraseña = Contraseña.Text;
-
+            String resultado = conexion.loginVeterinario(Usuario.Text, Contraseña.Text);
+            MessageBox.Show(resultado);
+            //VentanaPrincipal v = new VentanaPrincipal();
+            //v.Show();
 
         }
 
@@ -46,6 +40,11 @@ namespace VeterinarioBasico
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VentanaLogin_Load(object sender, EventArgs e)
         {
 
         }

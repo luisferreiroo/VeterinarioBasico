@@ -16,5 +16,10 @@ namespace VeterinarioBasico
         {
             InitializeComponent();
         }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

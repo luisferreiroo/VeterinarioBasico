@@ -40,6 +40,7 @@ namespace VeterinarioBasico
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registro";
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.Registro_Load);
             this.ResumeLayout(false);
 
         }
